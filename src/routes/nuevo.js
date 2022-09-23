@@ -1,4 +1,4 @@
-const moda = (arr) =>{
+/* const moda = (arr) =>{
     let recorrido = new Map();
 
     arr.forEach((valor)=>{
@@ -24,3 +24,4 @@ const moda = (arr) =>{
 }
 let arr = [1,2,3,4,5,5,4,2,] 
 console.log(moda(arr))
+ */

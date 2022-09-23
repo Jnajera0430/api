@@ -8,7 +8,12 @@ router.get('/', (req,res)=>{
 })
 
 
-const arr = [1,2,1,4,5,2,2,3,3,3,6,1];
+
+
+
+
+module.exports = router;
+/*const arr = [1,2,1,4,5,2,2,3,3,3,6,1];
 const encontrarelnumero = (arr)=>{
     if(arr.lenght<= 0) return 0
 
@@ -22,7 +27,7 @@ const encontrarelnumero = (arr)=>{
     })
 
     let max = Object.entries(obj).reduce(function(prev, curr){
-        return prev[1] <= curr[1] ? prev : curr;
+        return prev[1] > curr[1] ? prev : curr;
     })
     console.log(max)
     let comparar = []
@@ -32,14 +37,7 @@ const encontrarelnumero = (arr)=>{
             comparar.push(i)
         }
     }
-    Object.entries(obj).forEach(i =>{
-        
-        if(obj[i]==max[1]){
-            comparar2.push(obj[i])
-        }
-    } )
     
-    console.log(obj[1])
+    console.log(comparar)
 }
-encontrarelnumero(arr)
-module.exports = router;
+encontrarelnumero(arr)*/
