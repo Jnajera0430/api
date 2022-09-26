@@ -1,4 +1,4 @@
-alert('funciono')
+console.log('funciono');
 
 
 /* 18.7 EJERCICIO 7
@@ -55,3 +55,35 @@ Descargar página HTML
 Completar el código JavaScript proporcionado para que cuando se pulse sobre el enlace se muestre completo el contenido de texto. Además, el enlace debe dejar de mostrarse después de pulsarlo por primera vez. La acción de pulsar sobre un enlace forma parte de los "Eventos" de JavaScript que se ven en el siguiente capítulo. En este ejercicio, sólo se debe saber que al pinchar sobre el enlace, se ejecuta la función llamada muestra().
 
 Descargar página HTML */
+
+const arr = [1,1,1,1,2,2,2,3,3,3,3,1,5,5,4,4,4,6,6,6,5,5,5]
+const Erepetidos = [... new Set(arr)]
+console.log(Erepetidos)
+
+const Elrepetidos = arr =>{
+        
+    let obj = {}
+    arr.map(element =>{
+        if (obj[element]){
+            obj[element]++
+        }else{
+            obj[element] = 1
+        }
+    })
+    console.log(obj)
+
+    
+    const result = [];
+    arr.forEach((item)=>{
+    	//pushes only unique element
+        if(!result.includes(item)){
+    		result.push(item);
+    	}
+    })
+            
+    
+    console.log(result) 
+}
+
+console.log(Elrepetidos(arr))
+

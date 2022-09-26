@@ -44,7 +44,7 @@ app.use(session({
 app.use(require('./routes/index.js'))
 
 //public
-app.use(express.static(path.join(__dirname, '/public/')))
+app.use(express.static(path.join(__dirname + '/public/')))
 
 // starging the server
 app.listen(app.get('port'),()=>{
