@@ -7,12 +7,8 @@ router.get('/', (req,res)=>{
 
 })
 
-
-
-
-
-
 module.exports = router;
+
 /*const arr = [1,2,1,4,5,2,2,3,3,3,6,1];
 const encontrarelnumero = (arr)=>{
     if(arr.lenght<= 0) return 0

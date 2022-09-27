@@ -5,8 +5,9 @@ let arrayActividades = []
 
 
 //funciones
-const crearItem = (actividad) =>{
+const crearItem = (actividad,id) =>{
     let item ={
+    id: id,    
     actividad: actividad,
     estado: false
     }
@@ -31,7 +32,7 @@ const pintarDB = () => {
     }else{
         arrayActividades.forEach(element => {
             if(element.estado){
-                listaActividadesUI.innerHTML += `<div class="alert alert-success" role="alert"><span class="material-icons float-left mr-2">accessibility</span><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><span class="material-icons">done</span> <span class="material-icons">remove</span></span></div>`
+                listaActividadesUI.innerHTML += `<div class="alert alert-success" role="alert"><span class="material-icons float-left mr-2">accessibility</span><b>${element.id}-${element.actividad}</b> - ${element.estado}<span class="float-right"><span class="material-icons">done</span> <span class="material-icons">remove</span></span></div>`
             }else{
                 listaActividadesUI.innerHTML += `<div class="alert alert-danger" role="alert"><span class="material-icons float-left mr-2">accessibility</span><b>${element.actividad}</b> - ${element.estado}<span class="float-right"><span class="material-icons">done</span> <span class="material-icons">remove</span></span></div>`
             }
@@ -64,7 +65,10 @@ editarDB= (actividad)=>{
 formularioUI.addEventListener('submit', (e)=>{
     e.preventDefault()
     let actividadUI = document.getElementById('actividad').value
+    let id = 0;
     crearItem(actividadUI)
+    id++
+    console.log(id);
     guardarDB() 
     formularioUI.reset();
 })
